@@ -1,4 +1,4 @@
-*/data
+data
 .idea/
 *.pyc
 *.swp
@@ -12,4 +12,5 @@
 *.jpg
 *.xlsx
 .ipynb_checkpoints
-lv/__pycache__/
+__pycache__
+cache
