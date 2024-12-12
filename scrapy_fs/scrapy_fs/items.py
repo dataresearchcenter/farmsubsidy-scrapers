@@ -3,18 +3,19 @@
 # Farm subsidy data format:
 # http://farmsubsidy.readthedocs.org/en/latest/scraper.html#scraper-data-format
 
-from scrapy import Item, Field
+from itemloaders.processors import Join, MapCompose, TakeFirst
+from scrapy import Field, Item
 from scrapy.loader import ItemLoader
-from scrapy.loader.processors import TakeFirst, MapCompose, Join
-
-from scrapy_fs.scrubbers import (filter_euro_amount,
-                                filter_croatian_recipient_id,
-                                select_after_semicolon,
-                                filter_croatian_postcode,
-                                strip_line_breaks,
-                                make_comma_proof,
-                                filter_lithuanian_recipient_id,
-                                filter_lithuanian_location)
+from scrapy_fs.scrubbers import (
+    filter_croatian_postcode,
+    filter_croatian_recipient_id,
+    filter_euro_amount,
+    filter_lithuanian_location,
+    filter_lithuanian_recipient_id,
+    make_comma_proof,
+    select_after_semicolon,
+    strip_line_breaks,
+)
 
 
 class FarmSubsidyItem(Item):
@@ -52,4 +53,4 @@ class LithuanianLoader(ItemLoader):
     recipient_id_in = MapCompose(filter_lithuanian_recipient_id, str)
 
     recipient_location_in = MapCompose(filter_lithuanian_location)
-    recipient_location_out = Join(separator=', ')
+    recipient_location_out = Join(separator=", ")
