@@ -1,8 +1,7 @@
-Scraper for Finland
-=========================
+# Finland
 
-<http://www.mavi.fi/en/about-the-agency/Pages/EU-support-information-search-service.aspx>
+## How to get the data
 
-Anything but in-browser scraper seems to be quite difficult.
-
-FOIA request send on 5th of May to tiedonluovutus@mavi.fi
+1. Visit <https://tietolaari.ruokavirasto.fi/tietolaari/sheets/17>
+2. In the sheet, click 'in English'
+3. Click 'download csv'
