@@ -5,6 +5,9 @@ from scrapy.spiders import Spider
 
 from ..items import FarmSubsidyItem
 
+# Acutally faster to scrape sequentially and not in parallel
+SEQUENTIAL = True
+
 
 class ROSpider(Spider):
     """
@@ -13,7 +16,7 @@ class ROSpider(Spider):
 
     name = "RO"
 
-    custom_settings = {"AUTOTHROTTLE_ENABLED": True, "LOG_LEVEL": "INFO"}
+    custom_settings = {"AUTOTHROTTLE_ENABLED": not SEQUENTIAL, "LOG_LEVEL": "INFO"}
 
     # AMOUNT_RE = re.compile('[^\d\.]')
     # BAD_NAME = u'ID not available'
@@ -27,7 +30,10 @@ class ROSpider(Spider):
 
     def start_requests(self):
         url = f"https://plati.afir.info/Plati/AfisareListaPlatiEN?pageNumber=1&anFinanciar={self.year}"
-        yield scrapy.Request(url, callback=self.parse_total_pages)
+        if SEQUENTIAL:
+            yield scrapy.Request(url, callback=self.parse)
+        else:
+            yield scrapy.Request(url, callback=self.parse_total_pages)
 
     def parse_total_pages(self, response):
         total_pages_url = response.css("a#btn-last-page::attr(href)").get()
@@ -111,10 +117,11 @@ class ROSpider(Spider):
                 amount=total_eu_amount,
             )
 
-        # # Find the link to the next page
-        # next_page = response.css("a#btn-next-page::attr(href)").get()
+        if SEQUENTIAL:
+            # Find the link to the next page
+            next_page = response.css("a#btn-next-page::attr(href)").get()
 
-        # # If there's a next page, yield a new request
-        # if next_page:
-        #     next_page_url = response.urljoin(next_page)  # Make the URL absolute
-        #     yield scrapy.Request(url=next_page_url, callback=self.parse)
+            # If there's a next page, yield a new request
+            if next_page:
+                next_page_url = response.urljoin(next_page)  # Make the URL absolute
+                yield scrapy.Request(url=next_page_url, callback=self.parse)
