@@ -67,7 +67,12 @@ from ..items import FarmSubsidyItem
 class PLSpider(Spider):
     name = "PL"
 
-    custom_settings = {"AUTOTHROTTLE_ENABLED": True, "LOG_LEVEL": "INFO"}
+    custom_settings = {
+        "AUTOTHROTTLE_ENABLED": False,
+        "LOG_LEVEL": "INFO",
+        # "CONCURRENT_REQUESTS": 20,
+        # "CONCURRENT_REQUESTS_PER_DOMAIN": 20,
+    }
 
     def __init__(self, year=None, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -94,52 +99,77 @@ class PLSpider(Spider):
             url = f"https://beneficjenciwpr.minrol.gov.pl/api/beneficiary?first=0&page={x}&size={self.page_size}&sort=&currency.equals=pln&year.equals={self.year}"
             yield scrapy.Request(url, callback=self.parse)
 
+    # GET https://beneficjenciwpr.minrol.gov.pl/api/beneficiary/13139415
+
     def parse(self, response):
         for item in response.json():
-            # Extract data fields
+            # Prepare partial data
             name = ""
             first_name = item.get("firstname", "")
-
             if first_name:
                 name = first_name + " "
-
             if item.get("name", ""):
                 name += item.get("name", "")
-
-            locality = ""
-            if item.get("state"):
-                locality = item.get("state", "")
-
+            locality = item.get("state", "")
             recipient_postcode = item.get("postal", "")
-
             substate = item.get("substate", "")
             if substate and substate != item.get("state", ""):
                 if locality:
                     locality += ", "
-                locality += substate
-
-            # append substate_postal if it is different from the main postal code
+                    locality += substate
+                else:
+                    locality = substate
             substate_postal = item.get("substate_postal", "")
+
             if substate_postal and substate_postal != recipient_postcode:
                 if locality:
                     locality += ", "
-                locality += substate_postal
+                    locality += substate_postal
+                else:
+                    locality = substate_postal
 
-            amount = item.get("total", 0.0)
-
+            # amount = item.get("total", 0.0)
             identifier = f"{item.get('id', '')}-{item.get('taxnumber', '')}-{item.get('idnumber', '')}"
 
-            self.item_count += 1  # Increment counter
-            yield FarmSubsidyItem(
-                country="PL",
-                currency="PLN",
-                year=self.year,
-                recipient_name=name,
-                recipient_location=locality,
-                recipient_postcode=recipient_postcode,
-                amount=amount,
-                recipient_id=identifier,
-            )
+            # Prepare meta for detail request
+            meta = {
+                "country": "PL",
+                "currency": "PLN",
+                "year": self.year,
+                "recipient_name": name,
+                "recipient_location": locality,
+                "recipient_postcode": recipient_postcode,
+                # "amount": amount,
+                "recipient_id": identifier,
+            }
+            detail_url = f"https://beneficjenciwpr.minrol.gov.pl/api/beneficiary/{item.get('id')}"
+            yield scrapy.Request(detail_url, callback=self.parse_detail, meta=meta)
+
+    def parse_detail(self, response):
+        # Extract additional details from detail page
+        meta = response.meta
+        detail_data = response.json()
+
+        # Only keep allowed fields
+        allowed_fields = {
+            "country",
+            "currency",
+            "year",
+            "recipient_name",
+            "recipient_location",
+            "recipient_postcode",
+            "recipient_id",
+        }
+        filtered_meta = {k: v for k, v in meta.items() if k in allowed_fields}
+
+        for key, value in detail_data.items():
+            if isinstance(value, (int, float)) and value != 0:
+                if key in ["year"]:
+                    continue
+                # print(f"Key: {key}, Value: {value}")
+                yield FarmSubsidyItem(**filtered_meta, scheme=key, amount=value)
+
+        self.item_count += 1
 
     def closed(self, reason):
         # For 2022, 50 are missing. Unclear why.
