@@ -1,0 +1,771 @@
+[
+    {
+        "Code": null,
+        "Name": "Operations in the form of types of intervention for direct payments as provided for in Article 16 of Regulation (EU) 2021/2115",
+        "Purpose": null,
+        "Nomenclature": {
+            "Chapter_08_02": ["08 02 04"],
+            "Chapter_08_03": []
+        }
+    },
+    {
+        "Code": "I.1",
+        "Name": "Basic income support for sustainability",
+        "Purpose": "The basic income support is an area payment decoupled from production. The aim is to support viable farm income and resilience across the Union to enhance food security.",
+        "Nomenclature": {
+            "Chapter_08_02": ["08 02 04 01"],
+            "Chapter_08_03": []
+        }
+    },
+    {
+        "Code": "I.2",
+        "Name": "Complementary redistributive income support for sustainability",
+        "Purpose": "The complementary redistributive income support for sustainability is an area payment decoupled from production. The aim is to improve the distribution of direct payments by redistributing support from larger to smaller or medium-sized farms.",
+        "Nomenclature": {
+            "Chapter_08_02": ["08 02 04 02"],
+            "Chapter_08_03": []
+        }
+    },
+    {
+        "Code": "I.3",
+        "Name": "Complementary income support for young farmers",
+        "Purpose": "The complementary income support for young farmers is a payment decoupled from production providing enhanced income support to young farmers who are setting up for the first time. The aim is to modernise the agricultural sector by attracting young people and improving their business development.",
+        "Nomenclature": {
+            "Chapter_08_02": ["08 02 04 03"],
+            "Chapter_08_03": []
+        }
+    },
+    {
+        "Code": "I.4",
+        "Name": "Schemes for the climate and the environment",
+        "Purpose": "Eco-schemes are a payment decoupled from production. The aim is to target income support to agricultural practices beneficial for the environment, climate and animal welfare.",
+        "Nomenclature": {
+            "Chapter_08_02": ["08 02 04 04"],
+            "Chapter_08_03": []
+        }
+    },
+    {
+        "Code": "I.5",
+        "Name": "Small farmer's payments (Article 28)",
+        "Purpose": "The small farmer's payments are decoupled from production and replace all other direct payments for the concerned beneficiaries. The purpose of the payments for small farmers is to promote a more balanced distribution of support and to reduce administrative burden for both beneficiaries of small amounts and managing authorities.",
+        "Nomenclature": {
+            "Chapter_08_02": ["08 02 04 01"],
+            "Chapter_08_03": []
+        }
+    },
+    {
+        "Code": "I.6",
+        "Name": "Coupled income support",
+        "Purpose": "Coupled income support covers payments per hectare or head linked to specific productions. The aim is to improve competitiveness, sustainability, and/or quality in certain sectors and products that are particularly important for social, economic or environmental reasons and encounter certain difficulties.",
+        "Nomenclature": {
+            "Chapter_08_02": ["08 02 04 05"],
+            "Chapter_08_03": []
+        }
+    },
+    {
+        "Code": "I.7",
+        "Name": "Crop-specific payment for cotton",
+        "Purpose": "The crop-specific payment for cotton is a coupled payment granted per hectare of eligible area of cotton. It is a mandatory scheme for cotton producer's Member States to support the cotton production in regions where it is important for the agricultural economy.",
+        "Nomenclature": {
+            "Chapter_08_02": ["08 02 04 06"],
+            "Chapter_08_03": []
+        }
+    },
+    {
+        "Code": null,
+        "Name": "Measures set out in Annex I to Regulation (EU) No 1307/2013",
+        "Purpose": null,
+        "Nomenclature": {
+            "Chapter_08_02": ["08 02 05"],
+            "Chapter_08_03": []
+        }
+    },
+    {
+        "Code": "II.1",
+        "Name": "Basic payment scheme (Title III, Chapter 1, Sections 1, 2, 3 and 5)",
+        "Purpose": "The basic payment scheme is an area payment decoupled from production operated on the basis of payment entitlements allocated to farmers. The aim is to support the income of farmers which is, on average, significantly below the average income in the rest of the economy.",
+        "Nomenclature": {
+            "Chapter_08_02": ["08 02 05 04"],
+            "Chapter_08_03": []
+        }
+    },
+    {
+        "Code": "II.2",
+        "Name": "Single area payment scheme (Article 36)",
+        "Purpose": "The single area payment scheme is an area payment decoupled from production paid for eligible hectares declared by a farmer. The aim is to support the income of farmers which is, on average, significantly below the average income in the rest of the economy.",
+        "Nomenclature": {
+            "Chapter_08_02": ["08 02 05 02"],
+            "Chapter_08_03": []
+        }
+    },
+    {
+        "Code": "II.3",
+        "Name": "Redistributive payment (Title III, Chapter 2)",
+        "Purpose": "The redistributive payment is a decoupled area payment. The aim is to support smaller farms by providing them an additional support on their first hectares declared under the basic payment.",
+        "Nomenclature": {
+            "Chapter_08_02": ["08 02 05 03"],
+            "Chapter_08_03": []
+        }
+    },
+    {
+        "Code": "II.4",
+        "Name": "Payment for agricultural practices beneficial for the climate and the environment (Title III, Chapter 3)",
+        "Purpose": "Greening is a decoupled area payment per hectare paid. The aim is to observe three agricultural practices in favour of the climate and the environment: crop diversification, maintenance of permanent grassland and having ecological focus area on the agricultural area",
+        "Nomenclature": {
+            "Chapter_08_02": ["08 02 05 05"],
+            "Chapter_08_03": []
+        }
+    },
+    {
+        "Code": "II.5",
+        "Name": "Payment for areas with natural constraints (Title III, Chapter 4)",
+        "Purpose": "The payment to areas with natural constraints is an area based decoupled payment, provided on top of the basic payment to farmers. The aim is to give support to farmers who are situated in areas with natural constraints.",
+        "Nomenclature": {
+            "Chapter_08_02": ["08 02 05 06"],
+            "Chapter_08_03": []
+        }
+    },
+    {
+        "Code": "II.6",
+        "Name": "Payment for young farmers (Title III, Chapter 5)",
+        "Purpose": "Payment for young farmers is a payment decoupled from production providing enhanced income support to young farmers who are newly set up for the first time. The aim is to promote the creation and development of new economic activities in the agricultural sector, which is essential for the competitiveness of the agricultural sector in the Union.",
+        "Nomenclature": {
+            "Chapter_08_02": ["08 02 05 07"],
+            "Chapter_08_03": []
+        }
+    },
+    {
+        "Code": "II.7",
+        "Name": "Voluntary coupled support (Title IV, Chapter 1)",
+        "Purpose": "The voluntary coupled support covers payments per hectare or head linked to specific productions. The aim is to improve the competitiveness and sustainability of sectors that are particularly important for economic, social or environmental reasons and undergo certain difficulties.",
+        "Nomenclature": {
+            "Chapter_08_02": ["08 02 05 09"],
+            "Chapter_08_03": []
+        }
+    },
+    {
+        "Code": "II.8",
+        "Name": "Crop-specific payment for cotton (Title IV, Chapter 2)",
+        "Purpose": "The crop-specific payment for cotton is a coupled payment granted per hectare of eligible area of cotton. It is a mandatory scheme for Member States producing cotton so as to support its production in regions where it is important for the agricultural economy.",
+        "Nomenclature": {
+            "Chapter_08_02": ["08 02 05 08"],
+            "Chapter_08_03": []
+        }
+    },
+    {
+        "Code": "II.9",
+        "Name": "Small farmers scheme (Title V)",
+        "Purpose": "The small farmers' scheme is decoupled from production and replaces all other direct payments for the concerned beneficiaries. The aim is to promote a more balanced distribution of support and to reduce administrative burden for both beneficiaries of small amounts and managing authorities.",
+        "Nomenclature": {
+            "Chapter_08_02": ["08 02 05 10"],
+            "Chapter_08_03": []
+        }
+    },
+    {
+        "Code": "II.10",
+        "Name": "Measures set out in Annex I to Council Regulation (EC) No 73/2009²",
+        "Purpose": "The aim of these direct payments is to decouple support from the production of crops and livestock in order to improve the income support of the farmers.",
+        "Nomenclature": {
+            "Chapter_08_02": ["08 02 99 01"],
+            "Chapter_08_03": []
+        }
+    },
+    {
+        "Code": null,
+        "Name": "Operations in the form of sectoral interventions as provided for in Article 42 of Regulation (EU) 2021/2115",
+        "Purpose": null,
+        "Nomenclature": {
+            "Chapter_08_02": ["08 02 02"],
+            "Chapter_08_03": []
+        }
+    },
+    {
+        "Code": "III.1",
+        "Name": "In the fruit and vegetables sector (Articles 49 to 53)",
+        "Purpose": "The aim is to support concentration of supply, competitiveness and sustainability of the fruit and vegetables sector. It is done through producer organisations (PO) or their associations (APO) recognised under Regulation (EU) No 1308/2013 and running operational programmes in accordance with Regulation (EU) 2021/2115. Beneficiaries are POs and APOs. Programmes have a duration of between 3 and 7 years and are managed on a financial year basis. Member States have to approve every single programme.",
+        "Nomenclature": {
+            "Chapter_08_02": ["08 02 02 01"],
+            "Chapter_08_03": []
+        }
+    },
+    {
+        "Code": "III.2",
+        "Name": "In the apiculture products sector (Articles 54, 55 and 56)",
+        "Purpose": "The aim is to support beekeepers, quality and market for apiculture products",
+        "Nomenclature": {
+            "Chapter_08_02": ["08 02 02 02"],
+            "Chapter_08_03": []
+        }
+    },
+    {
+        "Code": "III.3",
+        "Name": "In the wine sector (Articles 57 to 60)",
+        "Purpose": "The aim is to support competitiveness and sustainability of the wine sector. Programmes are run by Member States at national level as part of their Strategic Plan and are managed in a financial year basis. Beneficiaries are winegrowers as well as wine-making and wine-trading operators or their associations/organisations. Operations to be approved by Member States can be annual or multiannual.",
+        "Nomenclature": {
+            "Chapter_08_02": ["08 02 02 03"],
+            "Chapter_08_03": []
+        }
+    },
+    {
+        "Code": "III.4",
+        "Name": "In the hops sector (Articles 61 and 62)",
+        "Purpose": "The aim is to support concentration of supply, competitiveness and sustainability of the hops sector through producer organisations (PO) or their associations (APO) recognised under Regulation (EU) No 1308/2013 and running operational programmes in accordance with Regulation (EU) 2021/2115. Beneficiaries are POs or APOs. Programmes have a duration of between 3 and 7 years and are managed on a financial year basis. Member States have to approve every single programme.",
+        "Nomenclature": {
+            "Chapter_08_02": ["08 02 02 04"],
+            "Chapter_08_03": []
+        }
+    },
+    {
+        "Code": "III.5",
+        "Name": "In the olive oil and table olives sector (Articles 63, 64 and 65)",
+        "Purpose": "The aim is to support concentration of supply, competitiveness and sustainability of the olive oil and table olives sector through producer organisations (PO) and their associations (APO) recognised under Regulation (EU) No 1308/2013 and running operational programmes in accordance with Regulation (EU) 2021/2115. Beneficiaries are POs or APOs. Programmes have a duration of between 3 and 7 years and are managed in a financial year basis. Member States have to approve every single programme.",
+        "Nomenclature": {
+            "Chapter_08_02": ["08 02 02 05"],
+            "Chapter_08_03": []
+        }
+    },
+    {
+        "Code": "III.6",
+        "Name": "In other sectors referred to in Article 1(2), points (a) to (h), (k), (m), (o) to (t) and (w), of Regulation (EU) No 1308/2013 and sectors covering products listed in Annex XIII to Regulation (EU) 2021/2115. (Articles 66, 67 and 68)",
+        "Purpose": "The aim is to support concentration of supply, competitiveness and sustainability of the related sectors through producer organisations (PO), their associations (APO) recognised under Regulation (EU) No 1308/2013, as well as Producers Groups (PG) temporarily approved by Member States and running operational programmes in accordance with Regulation (EU) 2021/2115. Beneficiaries are POs, APOs or PGs. Programmes have a duration of between 3 and 7 years and are managed in a financial year basis. Member States have to approve every single programme.",
+        "Nomenclature": {
+            "Chapter_08_02": ["08 02 02 06"],
+            "Chapter_08_03": []
+        }
+    },
+    {
+        "Code": null,
+        "Name": "Measures set out in Regulation (EU) No 1308/2013",
+        "Purpose": null,
+        "Nomenclature": {
+            "Chapter_08_02": ["08 02 03"],
+            "Chapter_08_03": []
+        }
+    },
+    {
+        "Code": "IV.1",
+        "Name": "Public intervention (Chapter I, Section 2)",
+        "Purpose": "When market prices for certain agricultural products fall below a pre-determined level, the public authorities of the Member States may intervene to stabilise the market by purchasing surplus supplies, which may then be stored until the market price increases. The entities that must be published are the ones which benefit from the aid, in other words the entities from which the product has been bought.",
+        "Nomenclature": {
+            "Chapter_08_02": ["08 02 03 10"],
+            "Chapter_08_03": []
+        }
+    },
+    {
+        "Code": "IV.2",
+        "Name": "Aid for private storage (Chapter I, Section 3)",
+        "Purpose": "The aim of the aid granted is to temporarily support producers of certain products regarding the cost of private storage.",
+        "Nomenclature": {
+            "Chapter_08_02": [
+                "08 02 03 10 0001 005",
+                "08 02 03 10 0001 007",
+                "08 02 03 10 0001 008",
+                "08 02 03 10 0006 015",
+                "08 02 03 10 0007 010",
+                "08 02 03 10 0008 002",
+                "08 02 03 10 0009 002"
+            ],
+            "Chapter_08_03": []
+        }
+    },
+    {
+        "Code": "IV.3",
+        "Name": "The EU school scheme, school fruit and school milk schemes (Chapter II, Section 1)",
+        "Purpose": "The aim of the aid provided is to support the distribution of agricultural products to children in nursery, primary and secondary schools with the objective to increase their fruit, vegetables and milk consumption and improve their eating habits.",
+        "Nomenclature": {
+            "Chapter_08_02": ["08 02 03 04"],
+            "Chapter_08_03": []
+        }
+    },
+    {
+        "Code": "IV.4",
+        "Name": "Exceptional measures (Chapter I, Sections 1, 2 and 3)",
+        "Purpose": "The aim of the exceptional measures granted under Article 219(1), Article 220(1) and Article 221(1) and (2) of Regulation (EU) No 1308/2013 is to support agricultural markets in accordance with Article 5(2), point (a), of Regulation (EU) 2021/2116.",
+        "Nomenclature": {
+            "Chapter_08_02": ["08 02 03 11"],
+            "Chapter_08_03": []
+        }
+    },
+    {
+        "Code": "IV.5",
+        "Name": "Aid in the fruit and vegetables sector (Chapter II, Section 3)",
+        "Purpose": "Growers are encouraged to join producer organisations (POs). These receive aid for implementing operational programmes, based on a national strategy. The aim of the aid granted is also to mitigate income fluctuation from crises. Aid is offered for crisis prevention and crisis management measures under operational programmes, i.e.: product withdrawal, green harvesting/non-harvesting, promotion and communication tools, training, harvest insurance, help to secure bank loans and cover administrative costs of setting up mutual funds (farmer-owned stabilisation funds).",
+        "Nomenclature": {
+            "Chapter_08_02": ["08 02 03 06"],
+            "Chapter_08_03": []
+        }
+    },
+    {
+        "Code": "IV.6",
+        "Name": "Support in the wine sector (Chapter II, Section 4)",
+        "Purpose": "The aim of the various aids granted is to ensure market balance and increase the competitiveness of Union wine: support for promotion of wine on third country markets and information on responsible consumption of wine and the Union system of Protected Designation of Origin (PDO) and Protected Geographical Indication (PGI); co-financing of costs for restructuring and conversion of vineyards, for investments in wineries and in marketing facilities as well as for innovation; support for green harvesting, mutual funds, harvest insurance and by-product distillation.",
+        "Nomenclature": {
+            "Chapter_08_02": ["08 02 03 07"],
+            "Chapter_08_03": []
+        }
+    },
+    {
+        "Code": "IV.7",
+        "Name": "Support in the olive oil and tables olives sector (Chapter II, Section 2)",
+        "Purpose": "Support granted to the three-year work programmes to be drawn up by producer organisations, associations of producer organisations or inter-branch organisations in one or more of the following areas: market follow-up and management in the olive oil and table olives sector; the improvement of the environmental impact of olive cultivation; the improvement of the competitiveness of olive cultivation through modernisation; the improvement of the production quality of olive oil and table olives; the traceability system, the certification and protection of the quality of olive oil and table olives; the dissemination of information on measures carried out by producer organisations, associations of producer organisations or interbranch organisations to improve the quality of olive oil and table olives.",
+        "Nomenclature": {
+            "Chapter_08_02": ["08 02 03 05"],
+            "Chapter_08_03": []
+        }
+    },
+    {
+        "Code": "IV.8",
+        "Name": "Aid in the apiculture sector (Chapter II, Section 5)",
+        "Purpose": "The aim of the aid granted is to support this sector through apiculture programmes in order to improve the production and marketing of apiculture products.",
+        "Nomenclature": {
+            "Chapter_08_02": ["08 02 03 08"],
+            "Chapter_08_03": []
+        }
+    },
+    {
+        "Code": "IV.9",
+        "Name": "Aid in the hops sector (Chapter II, Section 6)",
+        "Purpose": "Aid granted to support hops producer organisations.",
+        "Nomenclature": {
+            "Chapter_08_02": ["08 02 03 09"],
+            "Chapter_08_03": []
+        }
+    },
+    {
+        "Code": null,
+        "Name": "Operation in the form of types of intervention for rural development as provided for in Article 69 of Regulation (EU) 2021/2115",
+        "Purpose": null,
+        "Nomenclature": {
+            "Chapter_08_02": [],
+            "Chapter_08_03": ["08 03 01"]
+        }
+    },
+    {
+        "Code": "V.1",
+        "Name": "Environmental, climate and other management commitments",
+        "Purpose": "The aim of the aid granted is to compensate farmers, forest holders and other land managers for the additional costs and income foregone related to voluntary environment, climate and other management commitments undertaken which go beyond mandatory standards and which contribute to the specific objectives of the CAP, notably in the area of environment, climate and animal welfare.",
+        "Nomenclature": {
+            "Chapter_08_02": [],
+            "Chapter_08_03": ["08030101 0001"]
+        }
+    },
+    {
+        "Code": "V.2",
+        "Name": "Natural or other area-specific constraints",
+        "Purpose": "The aim of the aid granted is to compensate farmers for all or part of the additional costs and income foregone related to the natural or other area-specific constraints in the area concerned, such as mountainous areas.",
+        "Nomenclature": {
+            "Chapter_08_02": [],
+            "Chapter_08_03": ["08030101 0002"]
+        }
+    },
+    {
+        "Code": "V.3",
+        "Name": "Area-specific disadvantages resulting from certain mandatory requirements",
+        "Purpose": "The aim of the aid granted is to compensate farmers, forest holders and other land managers for all or part of the additional costs and income foregone related to certain area-specific disadvantages in the area concerned which are imposed by requirements resulting from the implementation of the Natura 2000 Directives (Council Directive 92/43/EEC³ and Directive 2009/147/EC of the European Parliament and of the Council⁴) or, for agricultural areas, the Water Framework Directive (Directive 2000/60/EC of the European Parliament and of the Council).",
+        "Nomenclature": {
+            "Chapter_08_02": [],
+            "Chapter_08_03": ["08030101 0003"]
+        }
+    },
+    {
+        "Code": "V.4",
+        "Name": "Investments, including investments in irrigation",
+        "Purpose": "The aim of the aid granted is to support investments in tangible or intangible assets, including investments in irrigation, that contribute to achieving one or more of the specific objectives of the CAP.",
+        "Nomenclature": {
+            "Chapter_08_02": [],
+            "Chapter_08_03": ["08030101 0004"]
+        }
+    },
+    {
+        "Code": "V.5",
+        "Name": "Setting-up of young farmers, new farmers and rural business start-up",
+        "Purpose": "The aim of the aid granted is to support the setting-up of young farmers, new farmers and, under certain conditions, rural business start-up with the view of contributing to the achievement of one or more of the specific objectives of the CAP.",
+        "Nomenclature": {
+            "Chapter_08_02": [],
+            "Chapter_08_03": ["08030101 0005"]
+        }
+    },
+    {
+        "Code": "V.6",
+        "Name": "Risk management tools",
+        "Purpose": "The aim of the aid granted is to promote risk management tools, which help farmers manage production and income risks related to their agricultural activity which are outside their control.",
+        "Nomenclature": {
+            "Chapter_08_02": [],
+            "Chapter_08_03": ["08030101 0006"]
+        }
+    },
+    {
+        "Code": "V.7",
+        "Name": "Cooperation",
+        "Purpose": "The aim of the aid granted is to support cooperation with the view of contributing to the achievement of one or more of the specific objectives of the CAP. This includes cooperation support to:\n(a) prepare and implement Operational Group operations of the European Innovation Partnership for agricultural productivity and sustainability;\n(b) prepare and implement LEADER\n(c) promote and support Union and national recognised quality schemes and their use by farmers;\n(d) support producer groups, producer organisations or inter-branch organisations;\n(e) prepare and implement Smart Villages strategies;\n(f) support other forms of cooperation.",
+        "Nomenclature": {
+            "Chapter_08_02": [],
+            "Chapter_08_03": ["08030101 0007"]
+        }
+    },
+    {
+        "Code": "V.8",
+        "Name": "Knowledge exchange and dissemination of information",
+        "Purpose": "The aim of the aid granted is to support knowledge exchange and information actions that contribute to one or more of the specific objectives of the CAP, specifically targeting the protection of nature, environment and climate, including environmental education and awareness actions and the development of rural businesses and communities. Such actions may include actions to promote innovation, training and advice as well as exchange and dissemination of knowledge and information.",
+        "Nomenclature": {
+            "Chapter_08_02": [],
+            "Chapter_08_03": ["08030101 0008"]
+        }
+    },
+    {
+        "Code": "VI.1",
+        "Name": "Knowledge transfer and information actions (Article 14)",
+        "Purpose": "This measure concerns training and other types of activities such as workshops, coaching, demonstration activities, information actions, short-term farm and forest exchange and visit schemes in order. The aim is to enhance the human potential of persons engaged in the agricultural, food and forestry sectors, land managers and small and medium-sized enterprises (SMEs) operating in rural areas.",
+        "Nomenclature": {
+            "Chapter_08_02": [],
+            "Chapter_08_03": ["08 03 01 02 01", "08 03 01 03 01"]
+        }
+    },
+    {
+        "Code": "VI.2",
+        "Name": "Advisory services, farm management and farm relief services (Article 15)",
+        "Purpose": "This measure, through the use of advisory services as well as the setting up of advisory, farm management and farm relief services, aims to improve the sustainable management and the economic and environmental performance of farm and forest holdings and SMEs operating in rural areas. It also promotes the training of advisors.",
+        "Nomenclature": {
+            "Chapter_08_02": [],
+            "Chapter_08_03": ["08 03 01 02 02", "08 03 01 03 02"]
+        }
+    },
+    {
+        "Code": "VI.3",
+        "Name": "Quality schemes for agricultural products and foodstuffs (Article 16)",
+        "Purpose": "The aim of this measure is to support all new entrants to the Union, national and voluntary quality schemes. Support may also cover costs arising from information and promotion activities in order to improve consumers' awareness of the existence and specifications of products produced under these Union and national quality schemes.",
+        "Nomenclature": {
+            "Chapter_08_02": [],
+            "Chapter_08_03": ["08 03 01 02 03", "08 03 01 03 03"]
+        }
+    },
+    {
+        "Code": "VI.4",
+        "Name": "Investments in physical assets (Article 17)",
+        "Purpose": "The aim of this measure is to improve the economic and environmental performance of agricultural holdings and rural enterprises, improve the efficiency of the agricultural products marketing and processing sectors, provide infrastructure needed for the development of agriculture and forestry and support non-remunerative investments necessary to achieve environmental aims.",
+        "Nomenclature": {
+            "Chapter_08_02": [],
+            "Chapter_08_03": ["08 03 01 02 04", "08 03 01 03 04"]
+        }
+    },
+    {
+        "Code": "VI.5",
+        "Name": "Restoring agricultural production potential damage by natural disasters and introduction of appropriate prevention actions (Article 18)",
+        "Purpose": "The aim of this measure is to help farmers prevent natural disasters and catastrophic events or restore agricultural potential, which has been damaged, after its formal recognition by the competent public authorities of Member States, in order to help farm viability and competitiveness in the face of such events.",
+        "Nomenclature": {
+            "Chapter_08_02": [],
+            "Chapter_08_03": ["08 03 01 02 05", "08 03 01 03 05"]
+        }
+    },
+    {
+        "Code": "VI.6",
+        "Name": "Farm and business development (Article 19)",
+        "Purpose": "The aim of this measure is to support the creation and development of new viable economic activities such as new holdings run by young farmers, new businesses in rural areas, or the development of small farms. Support is also given to new or existing enterprises for investments and development of non-agricultural activities which are essential for the development and competitiveness of rural areas and of all farmers diversifying their agricultural activities. The measure provides payments for farmers eligible for the small farmers scheme who permanently transfer their holding to another farmer.",
+        "Nomenclature": {
+            "Chapter_08_02": [],
+            "Chapter_08_03": ["08 03 01 02 06", "08 03 01 03 06"]
+        }
+    },
+    {
+        "Code": "VI.7",
+        "Name": "Basic services and village renewal in rural areas (Article 20)",
+        "Purpose": "The aim of this measure is to support the interventions stimulating growth and promoting environmental and socio-economic sustainability of rural areas, in particular through the development of local infrastructure (including broadband, renewable energy and social infrastructure) and local basic services, as well as through the renewal of villages and activities aimed at the restoration and upgrading of the cultural and natural heritage. The measure also supports the relocation of activities and conversion of facilities with a view to improving the quality of life or increasing the environmental performance of the settlement.",
+        "Nomenclature": {
+            "Chapter_08_02": [],
+            "Chapter_08_03": ["08 03 01 02 07", "08 03 01 03 07"]
+        }
+    },
+    {
+        "Code": "VI.8",
+        "Name": "Investments in forest area development and improvement of the viability of forests (Article 21, Articles 22 to 26)",
+        "Purpose": "The aim of this measure is to promote investments in development of woodlands, in forest protection, in innovation in forestry, in forestry technologies and forest products, in order to contribute to the growth potential of rural areas.",
+        "Nomenclature": {
+            "Chapter_08_02": [],
+            "Chapter_08_03": [
+                "08 03 01 02 08",
+                "08 03 01 02 37",
+                "08 03 01 02 47",
+                "08 03 01 02 57",
+                "08 03 01 03 08",
+                "08 03 01 03 37",
+                "08 03 01 03 47",
+                "08 03 01 03 57"
+            ]
+        }
+    },
+    {
+        "Code": "VI.9",
+        "Name": "Afforestation and creation of woodland (Article 22)",
+        "Purpose": "The aim of this sub-measure is to provide support for operations of afforestation and creation of woodland on agricultural and non-agricultural land.",
+        "Nomenclature": {
+            "Chapter_08_02": [],
+            "Chapter_08_03": ["See VI.8"]
+        }
+    },
+    {
+        "Code": "VI.10",
+        "Name": "Establishment, regeneration or renovation of agroforestry systems (Article 23)",
+        "Purpose": "The aim of this sub-measure is to support the establishment of agroforestry systems and practices where woody perennials are deliberately integrated with crops and/or animals on the same land unit.",
+        "Nomenclature": {
+            "Chapter_08_02": [],
+            "Chapter_08_03": ["See VI.8"]
+        }
+    },
+    {
+        "Code": "VI.11",
+        "Name": "Prevention and restoration of damage to forests from forest fires, natural disasters and catastrophic events (Article 24)",
+        "Purpose": "This sub-measure aims at preventing and restoring (clearing and replanting) forestry potential after the occurrence of forest fires, other natural disasters including pest and disease outbreaks, as well as climate change related threats.",
+        "Nomenclature": {
+            "Chapter_08_02": [],
+            "Chapter_08_03": ["See VI.8"]
+        }
+    },
+    {
+        "Code": "VI.12",
+        "Name": "Investments improving the resilience and environmental value of forest ecosystems (Article 25)",
+        "Purpose": "The aim of this sub-measure is to support actions that enhance the environmental value of the forest, facilitate the adaptation and mitigation of forests to climate change, provide ecosystem services and enhance the public amenity value of forest. The increase of the environmental value of the forest should be ensured.",
+        "Nomenclature": {
+            "Chapter_08_02": [],
+            "Chapter_08_03": ["See VI.8"]
+        }
+    },
+    {
+        "Code": "VI.13",
+        "Name": "Investments in forest technologies, processing, mobilising and marketing of forest products (Article 26)",
+        "Purpose": "This sub-measure aims at providing support for investment in machinery and/or equipment related to harvesting, cutting, mobilising, processing the wood prior to industrial sawing of wood. The main goal of this sub-measure is to improve the economic value of forests.",
+        "Nomenclature": {
+            "Chapter_08_02": [],
+            "Chapter_08_03": ["See VI.8"]
+        }
+    },
+    {
+        "Code": "VI.14",
+        "Name": "Setting up of producer groups and organisations (Article 27)",
+        "Purpose": "The aim of this measure is to support the setting up of producer groups and organisations, especially in the early years, when additional costs are incurred so as to face jointly market challenges and strengthening bargain power in relation to production and marketing, including in local markets.",
+        "Nomenclature": {
+            "Chapter_08_02": [],
+            "Chapter_08_03": ["08 03 01 02 09", "08 03 01 03 09"]
+        }
+    },
+    {
+        "Code": "VI.15",
+        "Name": "Agri-environment-climate (Article 28)",
+        "Purpose": "The aim of this measure is to encourage land managers to apply farming practices contributing to the protection of the environment, landscape, natural resources and climate mitigation and adaptation. It may concern not only environmentally beneficial improvements to farming practice but also the maintenance of existing beneficial practices.",
+        "Nomenclature": {
+            "Chapter_08_02": [],
+            "Chapter_08_03": [
+                "08 03 01 02 10",
+                "08 03 01 02 30",
+                "08 03 01 02 40",
+                "08 03 01 02 50",
+                "08 03 01 02 60",
+                "08 03 01 03 10",
+                "08 03 01 03 30",
+                "08 03 01 03 40",
+                "08 03 01 03 50",
+                "08 03 01 03 60"
+            ]
+        }
+    },
+    {
+        "Code": "VI.16",
+        "Name": "Organic farming (Article 29)",
+        "Purpose": "The aim of this measure is to focus on supporting the conversion to and/or the maintenance of organic farming practices and methods, with a view to encourage farmers to participate in such schemes, thus answering to society's demand for the use of environmentally friendly farm practices.",
+        "Nomenclature": {
+            "Chapter_08_02": [],
+            "Chapter_08_03": [
+                "08 03 01 02 11",
+                "08 03 01 02 31",
+                "08 03 01 02 41",
+                "08 03 01 02 51",
+                "08 03 01 02 61",
+                "08 03 01 03 11",
+                "08 03 01 03 31",
+                "08 03 01 03 41",
+                "08 03 01 03 51",
+                "08 03 01 03 61"
+            ]
+        }
+    },
+    {
+        "Code": "VI.17",
+        "Name": "Natura 2000 and Water Framework Directive payments (Article 30)",
+        "Purpose": "The aim of this measure is to give compensatory support to beneficiaries who suffer from particular disadvantages due to specific mandatory requirements in the areas concerned resulting from the implementation of Directives 92/43/EEC, 2009/147/EC and 2000/60/EC when compared to the situation of farmers and foresters in other areas not concerned by these disadvantages.",
+        "Nomenclature": {
+            "Chapter_08_02": [],
+            "Chapter_08_03": [
+                "08 03 01 02 12",
+                "08 03 01 02 32",
+                "08 03 01 02 42",
+                "08 03 01 02 52",
+                "08 03 01 02 62",
+                "08 03 01 03 12",
+                "08 03 01 03 32",
+                "08 03 01 03 42",
+                "08 03 01 03 52",
+                "08 03 01 03 62"
+            ]
+        }
+    },
+    {
+        "Code": "VI.18",
+        "Name": "Payments to areas facing natural or other specific constraints (Article 31)",
+        "Purpose": "The aim of this measure is to give support to beneficiaries who suffer from particular constraints due to their location in mountain areas or other areas facing significant natural constraints or specific constraints.",
+        "Nomenclature": {
+            "Chapter_08_02": [],
+            "Chapter_08_03": [
+                "08 03 01 02 13",
+                "08 03 01 02 33",
+                "08 03 01 02 43",
+                "08 02 01 02 53",
+                "08 03 01 02 63",
+                "08 03 01 03 13",
+                "08 03 01 03 33",
+                "08 03 01 03 43",
+                "08 02 01 03 53",
+                "08 03 01 03 63"
+            ]
+        }
+    },
+    {
+        "Code": "VI.19",
+        "Name": "Animal welfare (Article 33)",
+        "Purpose": "The aim of this measure is to provide payments to farmers who undertake, on a voluntary basis, to carry out operations of one or more animal welfare commitments.",
+        "Nomenclature": {
+            "Chapter_08_02": [],
+            "Chapter_08_03": [
+                "08 03 01 02 14",
+                "08 03 01 02 34",
+                "08 03 01 02 44",
+                "08 03 01 02 54",
+                "08 03 01 02 64",
+                "08 03 01 03 14",
+                "08 03 01 03 34",
+                "08 03 01 03 44",
+                "08 03 01 03 54",
+                "08 03 01 03 64"
+            ]
+        }
+    },
+    {
+        "Code": "VI.20",
+        "Name": "Forest-environmental and climate services and forest conservation (Article 34)",
+        "Purpose": "The aim of this measure is to respond to the needs of promoting the sustainable management and improvement of forests and woodland, including the maintenance and improvement of biodiversity, water and soil resources and combating climate change and also to the need to conserve the forest genetic resources, including activities such as development of different varieties of forest species in order to adapt to specific local conditions.",
+        "Nomenclature": {
+            "Chapter_08_02": [],
+            "Chapter_08_03": [
+                "08 03 01 02 15",
+                "08 03 01 02 35",
+                "08 03 01 02 45",
+                "08 03 01 02 55",
+                "08 03 01 02 65",
+                "08 03 01 03 15",
+                "08 03 01 03 35",
+                "08 03 01 03 45",
+                "08 03 01 03 55",
+                "08 03 01 03 65"
+            ]
+        }
+    },
+    {
+        "Code": "VI.21",
+        "Name": "Cooperation (Article 35)",
+        "Purpose": "The aim of this measure is to promote forms of co-operation involving at least two entities and aiming to develop, among others: pilot projects; new products, practices, processes and technologies in the agriculture, food and forestry sectors; tourism services; short supply chains and local markets; joint projects / practices concerning the environment / climate change; projects for the sustainable provision of biomass; non-LEADER local development strategies; forest management plans; and diversification into \"social farming\" activities.",
+        "Nomenclature": {
+            "Chapter_08_02": [],
+            "Chapter_08_03": ["08 03 01 02 16", "08 03 01 03 16"]
+        }
+    },
+    {
+        "Code": "VI.22",
+        "Name": "Risk management (Article 36)",
+        "Purpose": "This measure represents a new risk management toolkit and takes forward the possibilities that currently exist to support insurances and mutual funds via Member States' national direct payment envelopes to help farmers exposed to increasing economic and environmental risks. The measure also introduces an income stabilisation tool to provide compensation to farmers suffering a severe drop in their income.",
+        "Nomenclature": {
+            "Chapter_08_02": [],
+            "Chapter_08_03": ["08 03 01 02 17", "08 03 01 03 17"]
+        }
+    },
+    {
+        "Code": "VI.22a",
+        "Name": "Exceptional temporary support to farmers and SMEs particularly affected by the COVID-19 crisis (Article 39b)",
+        "Purpose": "The aim of this measure offers is to offer to farmers and to small and medium-sized enterprises (SMEs) temporary support due to the Covid-19 crisis.",
+        "Nomenclature": {
+            "Chapter_08_02": [],
+            "Chapter_08_03": ["08 03 01 02 21"]
+        }
+    },
+    {
+        "Code": "VI.22b",
+        "Name": "Exceptional temporary support to farmers and SMEs particularly affected by the Russia's invasion of Ukraine (Article 39c)",
+        "Purpose": "The aim of this measure is to offer to farmers and to small and medium-sized enterprises (SMEs) temporary support due to Russia's invasion of Ukraine.",
+        "Nomenclature": {
+            "Chapter_08_02": [],
+            "Chapter_08_03": ["08 03 01 02 22"]
+        }
+    },
+    {
+        "Code": "VI.23",
+        "Name": "Financing of complementary national direct payments for Croatia (Article 40)",
+        "Purpose": "The aim of this measure is to offer to the farmers eligible for complementary national direct payments in Croatia a top-up payment under the EAFRD.",
+        "Nomenclature": {
+            "Chapter_08_02": [],
+            "Chapter_08_03": ["08 03 01 02 18"]
+        }
+    },
+    {
+        "Code": "VI.24",
+        "Name": "Support for LEADER local development (community-led local development) (Article 35 of Regulation (EU) No 1303/2013 of the European Parliament and of the Council⁶)",
+        "Purpose": "The aim of this measure is to maintain LEADER as an integrated territorial development tool on sub-regional ('local') level which will directly contribute to the balanced territorial development of rural areas, which is one of the overall objectives of the rural development policy.",
+        "Nomenclature": {
+            "Chapter_08_02": [],
+            "Chapter_08_03": [
+                "08 03 01 02 19",
+                "08 03 01 02 39",
+                "08 03 01 02 49",
+                "08 03 01 02 59",
+                "08 03 01 02 69",
+                "08 03 01 03 19",
+                "08 03 01 03 39",
+                "08 03 01 03 49",
+                "08 03 01 03 59",
+                "08 03 01 03 69"
+            ]
+        }
+    },
+    {
+        "Code": "VI.25",
+        "Name": "Technical assistance (Articles 51 to 54)",
+        "Purpose": "The aim of this measure is to give to Member States the ability to provide a technical assistance to support actions that support administrative capacity linked to the management of European Structural and Investment (ESI) Funds. These actions may be addressed to the preparation, management, monitoring, evaluation, information and communication, networking, complaint resolution and control and audit of the Rural Development Programmes.",
+        "Nomenclature": {
+            "Chapter_08_02": [],
+            "Chapter_08_03": ["08 03 01 02 20", "08 03 01 03 20"]
+        }
+    },
+    {
+        "Code": "VII.1",
+        "Name": "Measures provided for in Regulation (EU) No 228/2013",
+        "Purpose": "POSEI measures are specific agricultural schemes aiming at taking into account the constraints of the Outermost Regions as required by Article 349 of the Treaty. It consists of two main elements: the specific supply arrangements and the measures to support local production. The former aims at mitigating additional costs for supplying essential products resulting from the remoteness of these regions (through aid for products from the Union and exemption from import duties for products from third countries) and the latter at assisting the development of the local agriculture sector (direct payments and market measures). POSEI also allow the financing of plant-health programmes.",
+        "Nomenclature": {
+            "Chapter_08_02": ["08 02 03 01", "08 02 05 01"],
+            "Chapter_08_03": []
+        }
+    },
+    {
+        "Code": "VIII.1",
+        "Name": "Measures provided for in Regulation (EU) No 229/2013",
+        "Purpose": "The regime for the smaller Aegean Islands is similar to POSEI but does not have the same legal basis in the Treaty and operates on a smaller scale than POSEI. It includes both the specific supply arrangements (limited however to aid for products from the Union) and the measures to support the local agricultural activities consisting in top-up payments for specifically defined local products.",
+        "Nomenclature": {
+            "Chapter_08_02": ["08 02 03 01", "08 02 05 01"],
+            "Chapter_08_03": []
+        }
+    },
+    {
+        "Code": "IX.1",
+        "Name": "Information and promotion measures provided for in Regulation (EU) No 1144/2014",
+        "Purpose": "Information provision and promotion measures concerning agricultural products and certain food products based on agricultural products implemented in the internal market or in third countries as listed in Regulation (EU) No 1144/2014 may be fully or partly financed by the Union budget, subject to the conditions laid down in this Regulation. These measures shall take the form of information and promotion programmes.",
+        "Nomenclature": {
+            "Chapter_08_02": ["08 02 03 02"],
+            "Chapter_08_03": []
+        }
+    }
+]

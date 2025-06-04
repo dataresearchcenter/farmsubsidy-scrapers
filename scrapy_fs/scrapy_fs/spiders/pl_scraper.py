@@ -56,7 +56,9 @@ additional columns that are taken if present
         }, {
 """
 
+import json
 import math
+import os
 
 import scrapy
 from scrapy.spiders import Spider
@@ -74,14 +76,37 @@ class PLSpider(Spider):
         # "CONCURRENT_REQUESTS_PER_DOMAIN": 20,
     }
 
-    def __init__(self, year=None, *args, **kwargs):
+    def __init__(self, year=None, raw=None, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.year = int(year)
+        self.raw = raw
         self.page_size = 50
-        self.expected_total_count = None  # Initialize expected_total_count
-        self.item_count = 0  # Initialize item counter
+        self.expected_total_count = None
+        self.item_count = 0
+
+        # Load scheme mapping with normalized keys
+        scheme_path = os.path.join(os.path.dirname(__file__), "pl_scheme.json")
+        try:
+            with open(scheme_path, encoding="utf-8") as f:
+                scheme_data = json.load(f)
+
+            # Normalize: "IV.9" -> "iv_9"
+            def normalize(code):
+                if not code:
+                    return None
+                return code.lower().replace(".", "_")
+
+            self.scheme_map = {
+                normalize(entry["Code"]): entry
+                for entry in scheme_data
+                if entry.get("Code")
+            }
+        except Exception as e:
+            self.scheme_map = {}
+            print(f"Could not load pl_scheme.json: {e}")
 
     def start_requests(self):
+
         url = f"https://beneficjenciwpr.minrol.gov.pl/api/beneficiary?first=0&page=0&size={self.page_size}&sort=&currency.equals=pln&year.equals={self.year}"
         yield scrapy.Request(url, callback=self.parse_total_count)
 
@@ -102,6 +127,9 @@ class PLSpider(Spider):
     # GET https://beneficjenciwpr.minrol.gov.pl/api/beneficiary/13139415
 
     def parse(self, response):
+        if self.raw:
+            yield {"url": response.url, "raw": json.dumps(response.json())}
+
         for item in response.json():
             # Prepare partial data
             name = ""
@@ -146,11 +174,13 @@ class PLSpider(Spider):
             yield scrapy.Request(detail_url, callback=self.parse_detail, meta=meta)
 
     def parse_detail(self, response):
-        # Extract additional details from detail page
         meta = response.meta
         detail_data = response.json()
 
-        # Only keep allowed fields
+        if self.raw:
+            yield {"url": response.url, "raw": json.dumps(detail_data)}
+            return
+
         allowed_fields = {
             "country",
             "currency",
@@ -166,14 +196,27 @@ class PLSpider(Spider):
             if isinstance(value, (int, float)) and value != 0:
                 if key in ["year"]:
                     continue
-                # print(f"Key: {key}, Value: {value}")
-                yield FarmSubsidyItem(**filtered_meta, scheme=key, amount=value)
+                scheme_code = key
+                # Normalize for lookup
+                norm_code = scheme_code.lower().replace(".", "_")
+                scheme_info = self.scheme_map.get(norm_code, {})
+                scheme_name = scheme_info.get("Name", "")
+                scheme_description = scheme_info.get("Purpose", "")
+
+                yield FarmSubsidyItem(
+                    **filtered_meta,
+                    scheme_code=scheme_code,
+                    scheme_name=scheme_name,
+                    scheme_description=scheme_description,
+                    amount=value,
+                )
 
         self.item_count += 1
 
     def closed(self, reason):
+
         # For 2022, 50 are missing. Unclear why.
-        if hasattr(self, "expected_total_count"):
+        if not self.raw and hasattr(self, "expected_total_count"):
             print(
                 f"Expected items: {self.expected_total_count}, Scraped items: {self.item_count}, Difference: {self.item_count - self.expected_total_count}"
             )

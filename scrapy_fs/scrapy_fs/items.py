@@ -1,4 +1,4 @@
-""" Item and Loader classes. """
+"""Item and Loader classes."""
 
 # Farm subsidy data format:
 # http://farmsubsidy.readthedocs.org/en/latest/scraper.html#scraper-data-format
@@ -19,6 +19,7 @@ from scrapy_fs.scrubbers import (
 
 
 class FarmSubsidyItem(Item):
+    id = Field()  # Only to identify duplicates with scrapy
     year = Field()
     country = Field()  # Two letters ISO 3166
     recipient_id = Field()
@@ -28,7 +29,9 @@ class FarmSubsidyItem(Item):
     recipient_location = Field()
     recipient_url = Field()
     agency = Field()
-    scheme = Field()
+    scheme_code = Field()
+    scheme_name = Field()
+    scheme_description = Field()
     amount = Field()
     currency = Field()
 

@@ -1,0 +1,17 @@
+[tool.poetry]
+authors = ["Johannes Filter <hi@jfilter.de>"]
+description = ""
+name = "it-captcha"
+readme = "README.md"
+version = "0.1.0"
+
+[tool.poetry.dependencies]
+python = "~3.9"
+keras = "3.9.2"
+tensorflow = "2.19.0"
+pillow = "11.2.1"
+flask = "^3.1.1"
+
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core"]

@@ -1,0 +1,20 @@
+{
+  "name": "special-scrapers",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {},
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.52.0",
+    "@types/node": "^22.15.17"
+  },
+  "dependencies": {
+    "csv-parser": "^3.2.0",
+    "form-data": "^4.0.2",
+    "jimp": "^1.6.0",
+    "node-fetch": "^3.3.2",
+    "p-queue": "^6.6.2"
+  }
+}
