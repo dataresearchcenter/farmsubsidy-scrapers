@@ -1,3 +1,20 @@
+"""
+1. Open the website https://etjanst.sjv.se/asken/faces/jbstod/searchJbstod.jsp
+2. Select the year (e.g., 2023) from the dropdown menu
+3. Select English as the language
+4. Click the "Search" button
+5. Change the page size to 100
+6. Open the web console, open a details view for a row and find the `ViewState` in a POST request body and the `JSESSIONID` cookie.
+7. Copy the `ViewState` and `JSESSIONID` values into the code below
+8. Run the spider with `scrapy crawl SE -a year=2023`
+9. The results will be saved in the `responses` directory as HTML files named `{year}_{page_number}_{offset}.html`
+10. Run the spider multile times since the website is flaky.
+
+You can increase `CONCURRENT_REQUESTS` but then you also have to run the spider again with only one thread.
+This is because the details view requires that the current page is opened before being able to make requests for the detail view.
+If you use multiple threads, the requests for the detail view might be made before the current page is opened, resulting in an HTML page that has no data (but has a 200 status).
+"""
+
 import html
 from pathlib import Path
 
@@ -6,8 +23,12 @@ from scrapy.spiders import Spider
 
 from ..items import FarmSubsidyItem
 
-viewstate = "+G9PnIYGASYwXFmoQlmp2EGyOtj8B2PaHtFMA7bwNCczxi5T+p6R1a8ClN8qOJLOW0CKmPgpW8hSG2dyU5UNyrvRJuE+jCSzm8Rbc4vMx0yBWtrd4QNhDzI8Nb7jwPvP3i5hcBEl2B4mJebK"
-cookie = "F5406B8932E22DB0158986BDEEAEAF09"
+viewstate = "qLxOAX8P3CUJ2HoBKQ58ry6yueRR51e4gDGybvBgIv6IkDC9DdCFG7vwCpTi510VKfC44Znrou2hoTYsN2oEwS7nO5hTLV4ySkv8DEcF4HwPVKpf2g/vrQhUWbZ3B5xhtxjHyQNQVyitkbas"
+cookie = "E87990DE319CDA5A80685A97BFF8EDFA"
+
+page_size = 100
+num_receivers = 62000  # in doubt, check it on the website
+num_concurrent_requests = 1  # number of concurrent requests to make
 
 
 class SESpider(Spider):
@@ -21,9 +42,8 @@ class SESpider(Spider):
         "AUTOTHROTTLE_ENABLED": False,
         "LOG_LEVEL": "INFO",
         "HTTPCACHE_ENABLED": False,
-        "HTTPCACHE_DIR": "httpcache",
-        "HTTPCACHE_POLICY": "scrapy_fs.cache_policies.NoContentLengthErrorCachePolicy",
-        "CONCURRENT_REQUESTS": 10,
+        "CONCURRENT_REQUESTS": num_concurrent_requests,
+        "CONCURRENT_REQUESTS_PER_DOMAIN": num_concurrent_requests,
     }
 
     def __init__(self, year=None):
@@ -31,20 +51,11 @@ class SESpider(Spider):
         self.year = int(year)
 
     def start_requests(self):
-        page_size = 100
-        for x in range(1, 620):
+        for x in range(1, num_receivers // page_size + 2):
             page_start = (x - 1) * page_size
             page_end = page_start + page_size - 1
 
-            # check if page_end was saved to file
-            # file_name = f"responses/{x}_{page_start}.html"
-            # try:
-            #     with open(file_name, "rb") as f:
-            #         print(f"File {file_name} already exists, skipping request")
-            #         continue
-            # except FileNotFoundError:
-            #     print(f"File {file_name} does not exist, making request")
-
+            # It is ESSENTIAL to open the current page before being able to make requests for the detail view.
             yield scrapy.FormRequest(
                 url="https://etjanst.sjv.se/asken/faces/jbstod/searchJbstod.jsp",
                 formdata={
@@ -69,16 +80,16 @@ class SESpider(Spider):
                     + ":j_id_jsp_121545192_98"
                 )
                 # check if file already exists
-                file_path = f"responses/{x}_{y}.html"
+                file_path = f"responses/{self.year}_{x}_{y}.html"
                 if Path(file_path).exists():
                     text = Path(file_path).read_text(encoding="utf-8")
                     if 'class="stodmottagare selected"' in text:
-                        print(
-                            f"File {file_path} already exists and contains .selected, skipping request"
-                        )
+                        # print(
+                        #     f"File {file_path} already exists and contains .selected, skipping request"
+                        # )
                         absolute_file_path = Path(file_path).resolve()
                         url = "file:///" + str(absolute_file_path)
-                        print(f"Using cached file: {url}")
+                        # print(f"Using cached file: {url}")
                         yield scrapy.Request(
                             url=url,
                             callback=self.parse_response,
@@ -93,6 +104,12 @@ class SESpider(Spider):
                         print(
                             f"File {file_path} exists but does not contain .selected, making request"
                         )
+                        # write to log file & skip request
+                        # with open("log.txt", "a") as log_file:
+                        #     log_file.write(
+                        #         f"File {file_path} exists but does not contain .selected, making request\n"
+                        #     )
+                        # continue
 
                 print(key)
                 yield scrapy.FormRequest(
@@ -127,6 +144,7 @@ class SESpider(Spider):
                     meta={
                         "page_number": x,
                         "offset": y,
+                        "fn": file_path,  # Save the file path in meta for later use
                     },
                 )
 
@@ -134,7 +152,7 @@ class SESpider(Spider):
         # get page number and offset from request meta
         page_number = response.meta.get("page_number", None)
         offset = response.meta.get("offset", None)
-        file_path = f"responses/{page_number}_{offset}.html"
+        file_path = f"responses/{self.year}_{page_number}_{offset}.html"
 
         with open(file_path, "wb") as f:
             f.write(response.body)
@@ -256,17 +274,6 @@ class SESpider(Spider):
                             scheme_code=scheme_code,
                             scheme_description=scheme_description.strip(),
                         )
-
-                # Also yield the total amount as a summary item
-                # yield FarmSubsidyItem(
-                #     country="SE",
-                #     currency="SEK",
-                #     year=self.year,
-                #     recipient_name=name.strip(),
-                #     recipient_location=location,
-                #     amount=total_amount,
-                #     scheme="Total",
-                # )
 
     def parse(self, _response):
         return
